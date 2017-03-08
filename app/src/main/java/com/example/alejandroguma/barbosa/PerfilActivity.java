@@ -35,7 +35,7 @@ public class PerfilActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id=item.getItemId();
         switch (id) {
-            case R.id.mLogOut:
+            case R.id.mLogOutPerfil:
                 Intent intent=new Intent(PerfilActivity.this,LoginActivity.class);
                 startActivity(intent);
                 finish();
