@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 public class PerfilActivity extends AppCompatActivity {
     TextView tUsername,tCorreo;
+    Intent intent;
     String username="",email="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,14 +37,15 @@ public class PerfilActivity extends AppCompatActivity {
         int id=item.getItemId();
         switch (id) {
             case R.id.mLogOutPerfil:
-                Intent intent=new Intent(PerfilActivity.this,LoginActivity.class);
+                intent=new Intent(PerfilActivity.this,LoginActivity.class);
                 startActivity(intent);
                 finish();
                 break;
             case R.id.mPerfil1:
-                Intent intent1=new Intent(PerfilActivity.this,MainActivity.class);
-                startActivity(intent1);
-                finish();
+                intent=new Intent(PerfilActivity.this,MainActivity.class);
+                intent.putExtra("username",username);
+                intent.putExtra("email",email);
+                startActivity(intent);
                 break;
         }
         return true;
