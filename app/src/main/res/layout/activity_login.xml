@@ -38,7 +38,8 @@
         android:hint="@string/password"
         android:inputType="textPassword"
         android:gravity="center"
-        android:id="@+id/ePassword"/>
+        android:id="@+id/ePassword"
+        />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
