@@ -35,6 +35,27 @@ String username,correo;
                 intent.putExtra("email",correo);
                 startActivity(intent);
                 break;
+            case R.id.mRestaurantes:
+                intent=new Intent(MainActivity.this,tabActivity.class);
+                intent.putExtra("username",username);
+                intent.putExtra("email",correo);
+                intent.putExtra("sel", "Rest");
+                startActivity(intent);
+                break;
+            case R.id.mBares:
+                intent=new Intent(MainActivity.this,tabActivity.class);
+                intent.putExtra("username",username);
+                intent.putExtra("email",correo);
+                intent.putExtra("sel", "Bar");
+                startActivity(intent);
+                break;
+            case R.id.mHoteles:
+                intent=new Intent(MainActivity.this,tabActivity.class);
+                intent.putExtra("username",username);
+                intent.putExtra("email",correo);
+                intent.putExtra("sel", "Hotel");
+                startActivity(intent);
+                break;
             case R.id.mLogOut:
                 intent=new Intent(MainActivity.this,LoginActivity.class);
                 startActivity(intent);

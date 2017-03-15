@@ -28,7 +28,7 @@ public class PerfilActivity extends AppCompatActivity {
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu2,menu);
+        getMenuInflater().inflate(R.menu.menu,menu);
         return true;
     }
 
@@ -36,16 +36,38 @@ public class PerfilActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id=item.getItemId();
         switch (id) {
-            case R.id.mLogOutPerfil:
-                intent=new Intent(PerfilActivity.this,LoginActivity.class);
-                startActivity(intent);
-                finish();
-                break;
-            case R.id.mPerfil1:
-                intent=new Intent(PerfilActivity.this,MainActivity.class);
+            case R.id.mPerfil:
+                intent=new Intent(PerfilActivity.this,PerfilActivity.class);
                 intent.putExtra("username",username);
                 intent.putExtra("email",email);
                 startActivity(intent);
+                finish();
+                break;
+            case R.id.mRestaurantes:
+                intent=new Intent(PerfilActivity.this,tabActivity.class);
+                intent.putExtra("username",username);
+                intent.putExtra("email",email);
+                intent.putExtra("sel", "Rest");
+                startActivity(intent);
+                break;
+            case R.id.mBares:
+                intent=new Intent(PerfilActivity.this,tabActivity.class);
+                intent.putExtra("username",username);
+                intent.putExtra("email",email);
+                intent.putExtra("sel", "Bar");
+                startActivity(intent);
+                break;
+            case R.id.mHoteles:
+                intent=new Intent(PerfilActivity.this,tabActivity.class);
+                intent.putExtra("username",username);
+                intent.putExtra("email",email);
+                intent.putExtra("sel", "Hotel");
+                startActivity(intent);
+                break;
+            case R.id.mLogOut:
+                intent=new Intent(PerfilActivity.this,LoginActivity.class);
+                startActivity(intent);
+                finish();
                 break;
         }
         return true;

@@ -9,4 +9,24 @@
     <string name="miPerfil">Mi Perfil</string>
     <string name="cerrarSesion">Cerrar Sesion</string>
     <string name="principal">Principal</string>
+    <string name="mRestaurantes">Restaurantes</string>
+    <string name="mHoteles">Hoteles</string>
+    <string name="mBares">Bares</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_tab">Barbosa</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="hotel1">Hotel 1</string>
+    <string name="hotel2">Hotel 2</string>
+    <string name="hotel3">Hotel 3</string>
+    <string name="restaurant1">Restaurante 1</string>
+    <string name="restaurant2">Restaurante 2</string>
+    <string name="restaurant3">Restaurante 3</string>
+    <string name="bar1">Bar 1</string>
+    <string name="bar2">Bar 2</string>
+    <string name="bar3">Bar 3</string>
+    <string name="hotel_title">Hoteles</string>
+    <string name="restaurant_title">Restaurantes</string>
+    <string name="tour_title">Bares</string>
 </resources>
