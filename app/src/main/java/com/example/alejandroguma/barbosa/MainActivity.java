@@ -34,6 +34,7 @@ String username,correo;
                 intent.putExtra("username",username);
                 intent.putExtra("email",correo);
                 startActivity(intent);
+                finish();
                 break;
             case R.id.mRestaurantes:
                 intent=new Intent(MainActivity.this,tabActivity.class);
@@ -41,6 +42,7 @@ String username,correo;
                 intent.putExtra("email",correo);
                 intent.putExtra("sel", "Rest");
                 startActivity(intent);
+                finish();
                 break;
             case R.id.mBares:
                 intent=new Intent(MainActivity.this,tabActivity.class);
@@ -48,6 +50,7 @@ String username,correo;
                 intent.putExtra("email",correo);
                 intent.putExtra("sel", "Bar");
                 startActivity(intent);
+                finish();
                 break;
             case R.id.mHoteles:
                 intent=new Intent(MainActivity.this,tabActivity.class);
@@ -55,6 +58,7 @@ String username,correo;
                 intent.putExtra("email",correo);
                 intent.putExtra("sel", "Hotel");
                 startActivity(intent);
+                finish();
                 break;
             case R.id.mLogOut:
                 intent=new Intent(MainActivity.this,LoginActivity.class);
@@ -65,5 +69,13 @@ String username,correo;
 
         }
         return true;
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        intent=new Intent(MainActivity.this,LoginActivity.class);
+        startActivity(intent);
+        finish();
+
     }
 }

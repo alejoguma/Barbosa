@@ -226,4 +226,14 @@ public class tabActivity extends AppCompatActivity {
                 break;
         }
     }
+    @Override
+    public void onBackPressed() {
+        Intent intent;
+        super.onBackPressed();
+        intent=new Intent(tabActivity.this,MainActivity.class);
+        intent.putExtra("username",extras.getString("username"));
+        intent.putExtra("email",extras.getString("email"));
+        startActivity(intent);
+        finish();
+    }
 }

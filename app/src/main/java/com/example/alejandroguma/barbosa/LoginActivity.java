@@ -49,6 +49,7 @@ public class LoginActivity extends AppCompatActivity {
                     intent.putExtra("username",username);
                     intent.putExtra("email",correo);
                     startActivity(intent);
+                    finish();
                 }else{
                     Toast.makeText(LoginActivity.this, "Datos  incorrectos", Toast.LENGTH_SHORT).show();
                 }

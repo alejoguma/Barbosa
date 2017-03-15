@@ -49,6 +49,7 @@ public class PerfilActivity extends AppCompatActivity {
                 intent.putExtra("email",email);
                 intent.putExtra("sel", "Rest");
                 startActivity(intent);
+                finish();
                 break;
             case R.id.mBares:
                 intent=new Intent(PerfilActivity.this,tabActivity.class);
@@ -56,6 +57,7 @@ public class PerfilActivity extends AppCompatActivity {
                 intent.putExtra("email",email);
                 intent.putExtra("sel", "Bar");
                 startActivity(intent);
+                finish();
                 break;
             case R.id.mHoteles:
                 intent=new Intent(PerfilActivity.this,tabActivity.class);
@@ -63,6 +65,7 @@ public class PerfilActivity extends AppCompatActivity {
                 intent.putExtra("email",email);
                 intent.putExtra("sel", "Hotel");
                 startActivity(intent);
+                finish();
                 break;
             case R.id.mLogOut:
                 intent=new Intent(PerfilActivity.this,LoginActivity.class);
@@ -73,4 +76,13 @@ public class PerfilActivity extends AppCompatActivity {
         return true;
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        intent=new Intent(PerfilActivity.this,MainActivity.class);
+        intent.putExtra("username",username);
+        intent.putExtra("email",email);
+        startActivity(intent);
+        finish();
+    }
 }
