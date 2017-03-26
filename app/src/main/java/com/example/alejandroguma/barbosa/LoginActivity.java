@@ -45,7 +45,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //validar que el usuario y contraseña sean iguales a los recibidos
                 if(eUsuario.getText().toString().equals(username)&&ePassword.getText().toString().equals(password)){
-                    Intent intent =new Intent(LoginActivity.this,MainActivity.class);
+                    Intent intent =new Intent(LoginActivity.this,drawerMainActivity.class);
                     intent.putExtra("username",username);
                     intent.putExtra("email",correo);
                     startActivity(intent);

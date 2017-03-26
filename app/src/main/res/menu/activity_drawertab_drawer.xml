@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_miperfil"
+            android:icon="@drawable/ic_account_box_black_24dp"
+            android:title="Mi perfil" />
+        <item
+            android:id="@+id/nav_hotel"
+            android:icon="@drawable/ic_hotel_black_24dp"
+            android:title="Hoteles" />
+        <item
+            android:id="@+id/nav_bar"
+            android:icon="@drawable/ic_local_bar_black_24dp"
+            android:title="Bares" />
+        <item
+            android:id="@+id/nav_rest"
+            android:icon="@drawable/ic_local_dining_black_24dp"
+            android:title="Restaurantes" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_highlight_off_black_24dp"
+            android:title="Cerrar sesion" />
+
+    </group>
+
+    <!--<item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>-->
+
+</menu>

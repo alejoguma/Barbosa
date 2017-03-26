@@ -29,4 +29,12 @@
     <string name="hotel_title">Hoteles</string>
     <string name="restaurant_title">Restaurantes</string>
     <string name="tour_title">Bares</string>
+    <string name="title_activity_drawertab">Barbosa</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_drawer_main">Barbosa</string>
+    <string name="title_activity_drawer_perfil">Barbosa</string>
+    <string name="lugart1">Nombre</string>
+    <string name="fecha">Tipo</string>
 </resources>
