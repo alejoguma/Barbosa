@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.alejandroguma.barbosa.fiestaspActivity"
+    android:orientation="vertical"
+    android:background="@drawable/fondo">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fiestas de la piña"
+        android:textColor="@color/blue"
+        android:textSize="30dp"
+        android:textAlignment="center"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20sp">
+        
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Estas festividades que se desarrollan en el mes de diciembre cada dos años, realiza eventos como; cabalgatas, tablados populares, festival de la canción piña de oro, actividades culturales, recreativas y deportivas, festival de orquestas y Reinado; en fin, las fiestas de la piña propicia las afinidades y los encuentros, el amor por el entorno local, el goce y el esparcimiento, y en general todos aquellos aspectos referidos a resaltar los valores cívicos y culturales de la población."
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:textAlignment="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pinas1" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:id="@+id/bAtraspina"
+            android:background="@color/steelblue"
+            android:text="Atras"
+            android:textColor="@color/white"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

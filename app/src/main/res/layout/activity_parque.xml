@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.alejandroguma.barbosa.parqueActivity"
+    android:orientation="vertical"
+    android:background="@drawable/fondo">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Parque Simon Bolivar"
+        android:textColor="@color/blue"
+        android:textSize="30dp"
+        android:textAlignment="center"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20sp">
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="El parque se encuentra ubicado entre las calles 13 y 15, y entre las carreras 14 y 15. El parque lleva este nombre en honor a Simón Bolívar nuestro libertador.
+Este espacio en la década de los años 20, era una extensa manga utilizada como potreros para ganado vacuno y paulatinamente los adultos y jóvenes del poblado fueron recuperándolo para realizar prácticas recreativas y lúdicas."
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:textAlignment="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:src="@drawable/parquesb1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:id="@+id/bAtrasparque"
+            android:background="@color/steelblue"
+            android:text="Atras"
+            android:textColor="@color/white"
+            />
+
+    </LinearLayout>
+</LinearLayout>

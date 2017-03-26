@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.alejandroguma.barbosa.iglesiactivity"
+    android:orientation="vertical"
+    android:background="@drawable/fondo">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Iglesia de San Antonio de Padua"
+        android:textColor="@color/blue"
+        android:textSize="30dp"
+        android:textAlignment="center"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20sp">
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="La Iglesia de San Antonio de Padua es un templo de culto católico bajo la advocación de San Antonio de Padua, está ubicado en el parque principal “Simón Bolívar” del municipio colombiano de Barbosa (Antioquia). El edificio es ecléctico en el que predominan rasgos de estilo neorrománico, la construcción comenzó en 1880 y termina totalmente en 1948. La iglesia pertenece a la jurisdicción eclesiástica de la Diócesis de Girardota."
+        android:textSize="15dp"
+        android:textAlignment="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/iglesia" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:id="@+id/bAtrasigle"
+            android:background="@color/steelblue"
+            android:text="Atras"
+            android:textColor="@color/white"
+            />
+
+    </LinearLayout>
+</LinearLayout>
