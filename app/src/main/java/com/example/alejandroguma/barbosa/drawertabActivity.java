@@ -1,5 +1,6 @@
 package com.example.alejandroguma.barbosa;
 
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -20,17 +21,23 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+
+
 public class drawertabActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener{
         private String title;
+
+
     private String nameTab1;
     private String nameTab2;
     private String nameTab3;
+
 
     private String sel;
     private Fragment tab1Fragment;
     private Fragment tab2Fragment;
     private Fragment tab3Fragment;
+
     Intent intent;
     private SectionsPagerAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;
@@ -168,6 +175,7 @@ public class drawertabActivity extends AppCompatActivity
                     return tab2Fragment;
                 case 2:
                     return tab3Fragment;
+
                 default: return null;
             }
         }
@@ -187,6 +195,7 @@ public class drawertabActivity extends AppCompatActivity
                     return nameTab2;
                 case 2:
                     return nameTab3;
+
             }
             return null;
         }
@@ -197,6 +206,7 @@ public class drawertabActivity extends AppCompatActivity
         nameTab1 = _nameTab1;
         nameTab2 = _nameTab2;
         nameTab3 = _nameTab3;
+
     }
 
     /** Method to set fragments to every tab **/
@@ -206,16 +216,19 @@ public class drawertabActivity extends AppCompatActivity
                 tab1Fragment = new HotelFragment();
                 tab2Fragment = new hotel2Fragment();
                 tab3Fragment = new hotel3Fragment();
+
                 break;
             case 2:
                 tab1Fragment = new restaurante1Fragment();
                 tab2Fragment = new restaurante2Fragment();
                 tab3Fragment = new restaurante3Fragment();
+
                 break;
             case 3:
                 tab1Fragment = new barFragment();
                 tab2Fragment = new bar2Fragment();
                 tab3Fragment = new bar3Fragment();
+
                 break;
         }
     }

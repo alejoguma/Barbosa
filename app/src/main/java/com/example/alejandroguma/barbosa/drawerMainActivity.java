@@ -155,36 +155,42 @@ public class drawerMainActivity extends AppCompatActivity
 
 
 
-        if (id == R.id.nav_miperfil) {
+        if (id == R.id.nav_miperfil1) {
             intent=new Intent(drawerMainActivity.this,drawerPerfilActivity.class);
             intent.putExtra("username",extras.getString("username"));
             intent.putExtra("email",extras.getString("email"));
             startActivity(intent);
             finish();
 
-        } else if (id == R.id.nav_hotel) {
+        } else if (id == R.id.nav_hotel1) {
             intent=new Intent(drawerMainActivity.this,drawertabActivity.class);
             intent.putExtra("username",extras.getString("username"));
             intent.putExtra("email",extras.getString("email"));
             intent.putExtra("sel", "Hotel");
             startActivity(intent);
             finish();
-        } else if (id == R.id.nav_bar) {
+        } else if (id == R.id.nav_bar1) {
             intent=new Intent(drawerMainActivity.this,drawertabActivity.class);
             intent.putExtra("username",extras.getString("username"));
             intent.putExtra("email",extras.getString("email"));
             intent.putExtra("sel", "Bar");
             startActivity(intent);
             finish();
-        } else if (id == R.id.nav_rest) {
+        } else if (id == R.id.nav_rest1) {
             intent=new Intent(drawerMainActivity.this,drawertabActivity.class);
             intent.putExtra("username",extras.getString("username"));
             intent.putExtra("email",extras.getString("email"));
             intent.putExtra("sel", "Rest");
             startActivity(intent);
             finish();
-
-        } else if (id == R.id.nav_logout) {
+        } else if (id == R.id.nav_ubi1) {
+            intent=new Intent(drawerMainActivity.this,MapsActivity.class);
+            intent.putExtra("username",extras.getString("username"));
+            intent.putExtra("email",extras.getString("email"));
+            intent.putExtra("sel", "Rest");
+            startActivity(intent);
+            finish();
+        } else if (id == R.id.nav_logout1) {
             intent=new Intent(drawerMainActivity.this,LoginActivity.class);
             startActivity(intent);
             finish();

@@ -19,6 +19,10 @@
             android:icon="@drawable/ic_local_dining_black_24dp"
             android:title="Restaurantes" />
         <item
+            android:id="@+id/nav_ubi1"
+            android:icon="@drawable/ic_place_black_24dp"
+            android:title="Ubicaciones" />
+        <item
             android:id="@+id/nav_logout1"
             android:icon="@drawable/ic_highlight_off_black_24dp"
             android:title="Cerrar sesion" />
