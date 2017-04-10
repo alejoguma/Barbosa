@@ -28,17 +28,17 @@ public class LoginActivity extends AppCompatActivity {
 
         username = prefs.getString("username","noname");
         password = prefs.getString("password","nopass");
-        correo = prefs.getString("correo","nocorreo");
+        correo = prefs.getString("email","nocorreo");
 
-        Log.d("login",String.valueOf(prefs.getInt("login",-1)));
+        /*Log.d("login",String.valueOf(prefs.getInt("login",-1)));
         Log.d("username", username);
         Log.d("password", password);
-        Log.d("correo", correo);
+        Log.d("email", correo);*/
 
         if ( prefs.getInt("login",-1) == 1) { // 1 hay alguien loggeado -1 no hay
             Intent intent = new Intent(LoginActivity.this, drawerMainActivity.class);
             intent.putExtra("username",username);
-            intent.putExtra("correo",correo);
+            intent.putExtra("email",correo);
             startActivity(intent);
             finish();
         }
@@ -90,10 +90,10 @@ public class LoginActivity extends AppCompatActivity {
            correo=data.getExtras().getString("email");
            editor.putString("username",username);
            editor.putString("password",password);
-           editor.putString("correo",correo);
+           editor.putString("email",correo);
            editor.commit();
 
-           Log.d("username",username);
+           //Log.d("username",username);
        }else{
            if(requestCode==1234&& resultCode==RESULT_CANCELED){
                Toast.makeText(this,"Error en login", Toast.LENGTH_SHORT).show();

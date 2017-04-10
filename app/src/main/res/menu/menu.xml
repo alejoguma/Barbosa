@@ -4,6 +4,7 @@
         android:id="@+id/mPerfil"
         android:title="@string/miPerfil"
     />
+
     <item
     android:id="@+id/mRestaurantes"
     android:title="@string/mRestaurantes"

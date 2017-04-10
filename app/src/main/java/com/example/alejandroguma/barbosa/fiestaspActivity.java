@@ -9,26 +9,16 @@ import android.view.View;
 import android.widget.Button;
 
 public class fiestaspActivity extends AppCompatActivity {
-    Button bAtraspina;
+
     Bundle extras;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fiestasp);
-        bAtraspina=(Button)findViewById(R.id.bAtraspina);
         extras= getIntent().getExtras();
 
 
-        bAtraspina.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent =new Intent(fiestaspActivity.this,drawerMainActivity.class);
-                intent.putExtra("username",extras.getString("username"));
-                intent.putExtra("email",extras.getString("email"));
-                startActivity(intent);
-                finish();
-            }
-        });
+
     }
 
     @Override

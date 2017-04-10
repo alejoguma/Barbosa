@@ -1,6 +1,7 @@
 package com.example.alejandroguma.barbosa;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -20,10 +21,14 @@ public class drawerPerfilActivity extends AppCompatActivity
     TextView tUsername,tCorreo;
     Intent intent;
     Bundle extras;
+    SharedPreferences prefs;//creopreferenciascompartidas
+    SharedPreferences.Editor editor;//el editor para lo anterior
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drawer_perfil);
+        prefs =getSharedPreferences("MisPreferencias",MODE_PRIVATE);//traigolas preferencias
+        editor = prefs.edit();//cargo el editor
         tUsername=(TextView)findViewById(R.id.tUsuarioperfil);
         tCorreo=(TextView)findViewById(R.id.tCorreoperfil);
         extras = getIntent().getExtras();
@@ -72,7 +77,12 @@ public class drawerPerfilActivity extends AppCompatActivity
             intent.putExtra("email",extras.getString("email"));
             startActivity(intent);
             finish();
-
+        } else if (id == R.id.nav_inicio2) {
+            intent=new Intent(drawerPerfilActivity.this,drawerMainActivity.class);
+            intent.putExtra("username",extras.getString("username"));
+            intent.putExtra("email",extras.getString("email"));
+            startActivity(intent);
+            finish();
         } else if (id == R.id.nav_hotel2) {
             intent=new Intent(drawerPerfilActivity.this,drawertabActivity.class);
             intent.putExtra("username",extras.getString("username"));
@@ -94,8 +104,16 @@ public class drawerPerfilActivity extends AppCompatActivity
             intent.putExtra("sel", "Rest");
             startActivity(intent);
             finish();
+        } else if (id == R.id.nav_ubi2) {
+            intent=new Intent(drawerPerfilActivity.this,MapsActivity.class);
+            intent.putExtra("username",extras.getString("username"));
+            intent.putExtra("email",extras.getString("email"));
+            startActivity(intent);
+            finish();
 
         } else if (id == R.id.nav_logout2) {
+            editor.putInt("login",-1);
+            editor.commit();
             intent=new Intent(drawerPerfilActivity.this,LoginActivity.class);
             startActivity(intent);
             finish();

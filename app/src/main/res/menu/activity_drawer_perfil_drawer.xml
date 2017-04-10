@@ -7,6 +7,10 @@
             android:icon="@drawable/ic_account_box_black_24dp"
             android:title="Mi perfil" />
         <item
+            android:id="@+id/nav_inicio2"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Inicio" />
+        <item
             android:id="@+id/nav_hotel2"
             android:icon="@drawable/ic_hotel_black_24dp"
             android:title="Hoteles" />
@@ -18,6 +22,10 @@
             android:id="@+id/nav_rest2"
             android:icon="@drawable/ic_local_dining_black_24dp"
             android:title="Restaurantes" />
+        <item
+            android:id="@+id/nav_ubi2"
+            android:icon="@drawable/ic_place_black_24dp"
+            android:title="Ubicaciones" />
         <item
             android:id="@+id/nav_logout2"
             android:icon="@drawable/ic_highlight_off_black_24dp"

@@ -8,7 +8,7 @@
     <string name="cancel">Cancel</string>
     <string name="miPerfil">Mi Perfil</string>
     <string name="cerrarSesion">Cerrar Sesion</string>
-    <string name="principal">Principal</string>
+    <string name="principal">Inicio</string>
     <string name="mRestaurantes">Restaurantes</string>
     <string name="mHoteles">Hoteles</string>
     <string name="mBares">Bares</string>
@@ -38,4 +38,5 @@
     <string name="lugart1">Nombre</string>
     <string name="fecha">Tipo</string>
     <string name="title_activity_maps">Map</string>
+    <string name="Principal">Principal</string>
 </resources>

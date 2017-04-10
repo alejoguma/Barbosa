@@ -2,6 +2,7 @@ package com.example.alejandroguma.barbosa;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -31,6 +32,8 @@ public class drawerMainActivity extends AppCompatActivity
     Intent intent;
     Bundle extras;
     ListView lista;
+    SharedPreferences prefs;//creopreferenciascompartidas
+    SharedPreferences.Editor editor;//el editor para lo anterior
     Lista_Entrada[] datos =new Lista_Entrada[]{
             new Lista_Entrada(R.drawable.iglesia,"Iglesia San Antonio de Padua","Lugar Turistico"),
             new Lista_Entrada(R.drawable.pinas,"Fiestas  de la Piña","Festival"),
@@ -40,6 +43,9 @@ public class drawerMainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drawer_main);
+
+        prefs =getSharedPreferences("MisPreferencias",MODE_PRIVATE);//traigolas preferencias
+        editor = prefs.edit();//cargo el editor
 
         extras = getIntent().getExtras();
         Adapter adapter = new Adapter(this,datos);
@@ -161,7 +167,12 @@ public class drawerMainActivity extends AppCompatActivity
             intent.putExtra("email",extras.getString("email"));
             startActivity(intent);
             finish();
-
+        } else if (id == R.id.nav_inicio1) {
+            intent=new Intent(drawerMainActivity.this,drawerMainActivity.class);
+            intent.putExtra("username",extras.getString("username"));
+            intent.putExtra("email",extras.getString("email"));
+            startActivity(intent);
+            finish();
         } else if (id == R.id.nav_hotel1) {
             intent=new Intent(drawerMainActivity.this,drawertabActivity.class);
             intent.putExtra("username",extras.getString("username"));
@@ -187,10 +198,11 @@ public class drawerMainActivity extends AppCompatActivity
             intent=new Intent(drawerMainActivity.this,MapsActivity.class);
             intent.putExtra("username",extras.getString("username"));
             intent.putExtra("email",extras.getString("email"));
-            intent.putExtra("sel", "Rest");
             startActivity(intent);
             finish();
         } else if (id == R.id.nav_logout1) {
+            editor.putInt("login",-1);
+            editor.commit();
             intent=new Intent(drawerMainActivity.this,LoginActivity.class);
             startActivity(intent);
             finish();

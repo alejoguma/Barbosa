@@ -3,6 +3,7 @@ package com.example.alejandroguma.barbosa;
 import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
@@ -27,7 +28,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar1);
+        toolbar.setTitle("Barbosa");
         b1=(Button)findViewById(R.id.bUhoteles);
         b2=(Button)findViewById(R.id.bUbares);
         b3=(Button)findViewById(R.id.bUrest);

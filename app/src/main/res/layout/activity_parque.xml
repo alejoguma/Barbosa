@@ -40,18 +40,5 @@ Este espacio en la década de los años 20, era una extensa manga utilizada como
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center">
-        <Button
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:id="@+id/bAtrasparque"
-            android:background="@color/steelblue"
-            android:text="Atras"
-            android:textColor="@color/white"
-            />
 
-    </LinearLayout>
 </LinearLayout>
